@@ -1,0 +1,54 @@
+{%extends "Base.html"%}
+
+{% block content%}
+<body>
+<a href="/">Index >>></a>
+    <form method="post" action="">{% csrf_token %}
+
+    <h2>To create a new Student:</h2>
+        Input Amount of new fake students(1-99): <input type="number" name="number",min="1" max="99" >
+        <button type="submit" name= "submit_button" value="student">Add students</button>
+    </form>
+    <form method="post" action="">{% csrf_token %}
+    <h2>To create a new Teacher:</h2>
+        Input Amount of new fake teachers(1-99): <input type="number" name="number",min="1" max="99" >
+        <button type="submit" name= "submit_button" value="teacher">Add teachers</button>
+            </select>
+    </form>
+    <form method="post" action="">{% csrf_token %}
+    <h2>To create a new Course:</h2>
+        Input Amount of new fake courses(1-99): <input type="number" name="number",min="1" max="99" >
+        <button type="submit" name= "submit_button" value="course">Add Courses</button>
+            </select>
+    </form>
+    <form method="post" action="">{% csrf_token %}
+    <h2>To create a new Tag:</h2>
+        Input Amount of new fake tages(1-99): <input type="number" name="number",min="1" max="99" >
+        <button type="submit" name= "submit_button" value="tag">Add Tages</button>
+            </select>
+    </form>
+    <form method="post" action="">{% csrf_token %}
+    <button type="submit" name= "submit_button" value="delete">Delete All Dummies</button>
+        <input type="hidden" name="number", value="1" >
+    </form>
+
+    <h6> Students ammount: {{students}} </h6>
+
+<div>
+    <span id="tt_elem2" class="Teachers">
+      Teachers ammount: {{teachers}}
+    </span>
+
+</div>
+<div>
+    <span id="tt_elem3" class="Courses">
+      Courses ammount: {{courses}}
+    </span>
+  </div>
+<div>
+    <span id="tt_elem4" class="Tags">
+      Tags ammount: {{tags}}
+    </span>
+  </div>
+
+{% endblock content%}

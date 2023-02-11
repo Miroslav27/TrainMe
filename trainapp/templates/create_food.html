@@ -1,0 +1,26 @@
+{%extends "Base.html"%}
+{% load static %}
+{% block content %}
+
+    <div class="container">
+        <br>
+
+            <form action="." method="post">
+                <table class="table align-middle" data-meal-id = {{meal.id}}  id="meal-form">
+                    {{ form.as_table }} {% csrf_token %}
+
+                    <tr>
+                        <td>
+                            <button type="submit" class="btn btn-primary" action="">Зберегти</button>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+         <td>
+
+
+
+        {{success_mes}}
+    </div>
+
+{% endblock content %}
